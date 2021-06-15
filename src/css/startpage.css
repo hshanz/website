@@ -1,0 +1,127 @@
+:root{
+    --backColor: #2a9d8f;
+    --typeSpeed: 5s;
+    --typeLength: 24;
+    --textColor: #e9c46a;
+    background-color: #2a9d8f;
+}
+
+.startpage-holder{
+    background-color: var(--backColor);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "typew" "explore";
+    grid-template-rows: 6fr 1fr;
+
+}
+
+.explore{
+    grid-area: explore;
+    justify-self: end;
+    align-self: center;
+    margin-right: 5%;
+}
+
+.explore-text{
+    font-size: 4vw;
+    opacity: 0;
+    font-family: "JetBrains Mono", monospace;
+    color: var(--textColor);
+    animation: fade 2s ease calc(var(--typeSpeed) + 1.5s) forwards;
+}
+
+.explore-text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.typew-holder {
+    grid-area: typew;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+
+.typew-text {
+    color: var(--textColor);
+    position: relative;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 6vw;
+    
+}
+.typew-text::before,
+.typew-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 1vw;
+}
+
+.typew-text::after{
+    background: var(--textColor);
+    width: 1em;
+    animation: type var(--typeSpeed) steps(var(--typeLength)) 0.5s forwards,
+    blink 1s step-start calc(var(--typeSpeed) + 1s) infinite;
+}
+
+.typew-text::before{
+    background: var(--backColor);
+    animation: type var(--typeSpeed) steps(var(--typeLength)) 0.5s forwards; 
+}
+
+.typew-subtitle {
+    color: #f89c51;
+    font-size: 5vw;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fade 2s ease calc(var(--typeSpeed) + 1s) forwards;
+}
+
+@keyframes type {
+    to {left: 100%;}
+    
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.0;
+    }
+
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+@media screen and (max-width: 650px) {
+    .startpage-holder{
+        max-height: 95vh;
+    }
+    
+}
+
+@media screen and (min-width: 650px) {
+    .typew-text{
+    font-size: 4vw;
+    }
+
+    .explore-text{
+        font-size: 2vw;
+    }
+
+    .typew-text::after{
+        width: 0.6em;
+    }
+
+    .typew-subtitle{
+        font-size: 2vw;
+    }
+}
