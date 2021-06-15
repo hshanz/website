@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import '../css/homepage.css'
 import * as Three from "three"
 
-const HomePage = (props) => {
+const HomePage = (props) => {/*
     useEffect(() => {
 
      // === Three.JS CODE START ===
@@ -26,9 +26,9 @@ const HomePage = (props) => {
      // === Three.JS EXAMPLE CODE END ===
         
     },)
-
+*/
     return (
-        <div/>
+        <div className="homepg-holder"/>
     );
 }
 

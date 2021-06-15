@@ -5,6 +5,7 @@ import '../css/startpage.css';
 
 const StartPage = (props) => {
     let history = useHistory();
+    let changed = false;
 
 
     useEffect(() => {
@@ -14,8 +15,12 @@ const StartPage = (props) => {
     },)
 
     const handleClick = () => {
+        if(!changed){
+            changed = true
+            history.push("/home")  
+        }
         console.log("Hello");  
-        history.push("/home")     
+           
     }
 
     
