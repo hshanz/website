@@ -8,13 +8,13 @@ const App = (props) =>  {
         return(
             
                 <BrowserRouter>
-                <div className="main">
+                
                     <Switch >
                         <Route exact path="/home" ><HomePage/> </Route> 
                         <Route exact path="/" ><StartPage/> </Route> 
                     </Switch>
 
-                </div>
+                
                     
                 </BrowserRouter>
         );

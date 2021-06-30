@@ -1,6 +1,6 @@
 # Credits
 3D Model:
-[Material Test #1](https://skfb.ly/EwBo) by WNS-Studio is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+[Coffe](https://skfb.ly/69JUx) by MrGraman is licensed under [CC Attribution-NonCommercial-NoDerivs](http://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 
 # Getting Started with Create React App
