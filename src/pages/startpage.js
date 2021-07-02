@@ -18,9 +18,7 @@ const StartPage = (props) => {
         if(!changed){
             changed = true
             history.push("/home")  
-        }
-        console.log("Hello");  
-           
+        }           
     }
 
     
@@ -33,7 +31,7 @@ const StartPage = (props) => {
                 <p className="typew-subtitle">Welcome to my portfolio</p>
             </div>
             <div className="explore">
-                <p onClick={handleClick} className="explore-text"> Explore futher -></p>
+                <p onClick={handleClick} className="explore-text"> (Explore) =></p>
             </div>
         </div>
         
