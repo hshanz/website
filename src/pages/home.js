@@ -52,7 +52,7 @@ const HomePage = (props) => {
     target.scrollBy(event.deltaX/5, event.deltaY/5);
     scrollLength += (event.deltaY/100);
     console.log(scrollLength)
-    cup.rotation.z += event.deltaY * 0.5;
+    cup.rotation.z += 0.1;
   
   };
 
@@ -73,23 +73,23 @@ const HomePage = (props) => {
       <div id="holder" className="content-holder" > 
 
         <div className="about glass">
-          <h1>About me</h1>
-          <p> Im am currently a third year software engineering student at Chalmers University of Technology</p>
-          <p>On my spare time i am an active member of Chalmers Student Union and i strive to keep campus a fun and colorful place </p>
-          <p></p>
+          <h1 className="homeHead">About me</h1>
+          <p className="homeP"> Im am currently a third year software engineering student at Chalmers University of Technology</p>
+          <p className="homeP">On my spare time i am an active member of Chalmers Student Union and i strive to keep campus a fun and colorful place </p>
+          <p className="homeP"></p>
         </div>
 
         <div className="projects glass">
-          <h1>Projects</h1>
+          <h1 className="homeHead">Projects</h1>
           <a className="project-link" href="https://github.com/KarlssonLucas/dat257-laskuppen" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faBook} color="black"/> Läskuppen </a>
-          <p>A fullstack project developed for a project course where the goal was to create a website for a reading competition between students. Live deployment can be found 
+          <p className="homeP">A fullstack project developed for a project course where the goal was to create a website for a reading competition between students. Live deployment can be found 
             <a id="site-link" href="http://laskuppen.herokuapp.com/" target="_blank" rel="noreferrer"> here!</a></p>
             <br/>
           <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faPaperclip} color="black"/> Portfolio website </a>
-          <p>This website! Made with React and threejs.</p>
+          <p className="homeP">This website! Made with React and threejs.</p>
           <br/>
           <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faCogs} color="black"/> Dotfiles </a>
-          <p>Dotfiles for my linux config</p>
+          <p className="homeP">Dotfiles for my linux config</p>
 
         </div>
 
