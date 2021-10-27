@@ -50,9 +50,13 @@ const HomePage = (props) => {
   const onMouseWheel = (event) => {
     event.preventDefault();
     target.scrollBy(event.deltaX/5, event.deltaY/5);
-    scrollLength += (event.deltaY/100);
-    console.log(scrollLength)
-    cup.rotation.z += 0.1;
+    
+    console.log(event.deltaY)
+    if(event.deltaY < 0){
+      cup.rotation.z += 0.1;
+    } else{
+      cup.rotation.z -= 0.1;
+    }
   
   };
 
