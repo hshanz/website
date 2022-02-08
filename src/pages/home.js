@@ -3,8 +3,8 @@ import "../css/homepage.css";
 import * as Three from "three";
 import data from '../assets/scene.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faPaperclip, faCogs } from "@fortawesome/free-solid-svg-icons";
-//import data from '%PUBLIC_URL%/assets/scene.json'
+import { faBook, faPaperclip, faCogs,faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons"
 
 const HomePage = (props) => {
   const animationRef = useRef(null);
@@ -53,9 +53,9 @@ const HomePage = (props) => {
     
     console.log(event.deltaY)
     if(event.deltaY < 0){
-      cup.rotation.z += 0.1;
+      cup.rotation.z += 0.2;
     } else{
-      cup.rotation.z -= 0.1;
+      cup.rotation.z -= 0.2;
     }
   
   };
@@ -78,30 +78,45 @@ const HomePage = (props) => {
 
         <div className="about glass">
           <h1 className="homeHead">About me</h1>
-          <p className="homeP"> Im am currently a third year software engineering student at Chalmers University of Technology</p>
-          <p className="homeP">On my spare time i am an active member of Chalmers Student Union and i strive to keep campus a fun and colorful place </p>
+          <p className="homeP"> 
+              I'm am currently a third year software engineering student at Chalmers University of Technology, my current interest are web development 
+              with focus on frontend design (UX/UI) and data visualization and manipulation in python. Currently I am working on my bachelor thesis in 
+              which me and 5 other students are designing and building a web interface for a Chalmers quantum computer.      
+          </p>
+          <p className="homeP">On my spare time I am an active member of Chalmers Student Union and i strive to keep campus a fun and colorful place</p>
           <p className="homeP"></p>
         </div>
 
         <div className="projects glass">
-          <h1 className="homeHead">Projects</h1>
+          <h1 className="homeHead">Projects & Fun stuff</h1>
           <a className="project-link" href="https://github.com/KarlssonLucas/dat257-laskuppen" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faBook} color="black"/> Läskuppen </a>
           <p className="homeP">A fullstack project developed for a project course where the goal was to create a website for a reading competition between students. Live deployment can be found 
             <a id="site-link" href="http://laskuppen.herokuapp.com/" target="_blank" rel="noreferrer"> here!</a></p>
-            <br/>
-          <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faPaperclip} color="black"/> Portfolio website </a>
+          <br/>
+            <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faPaperclip} color="black"/> Portfolio website </a>
           <p className="homeP">This website! Made with React and threejs.</p>
           <br/>
-          <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faCogs} color="black"/> Dotfiles </a>
+            <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faCogs} color="black"/> Dotfiles </a>
           <p className="homeP">Dotfiles for my linux config</p>
+          <br/>
+            <a className="project-link" href="https://github.com/hshanz/website" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faGithub} color="black"/> GitHub </a>
+          <p className="homeP">Checkout my Github to see what i am currently working on</p>
 
         </div>
 
         <div className="contact glass">
-          cool
+          <h1 className="homeHead">Contact</h1>
+          <a className="project-link" href="mailto: david00gbg@hotmail.com" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faEnvelope} color="black"/> Email </a>
+          <a className="project-link" href="https://www.linkedin.com/in/david-andreasson-025529231/" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faLinkedin} color="black"/> LinkedIn </a>
+          <p></p>
         </div>
+        <p></p>
+        
 
       </div>
+        <div className="scrollHint">
+        <p className="homeP">Scroll to see more and spin the cup</p>
+        </div>
     </div>
   );
 };
